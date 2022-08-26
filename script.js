@@ -28,3 +28,12 @@ if (winner === 'human') {
 };
 
 const advanceRound = () => currentRoundNumber++;
+
+function openInstructions(instructions) {
+  var i;
+  var x = document.getElementsByClassName("instructions");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(instructions).style.display = "block";
+}

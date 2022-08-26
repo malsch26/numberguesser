@@ -1,12 +1,49 @@
 * {
-  font-family: 'Nunito Sans';
+  font-family: 'Ubuntu', sans-serif;
   box-sizing: border-box;
 }
 
 body {
   margin: 0 auto;
   padding: 3px;
-  background-color: #fff;
+  background-color: #34104E;
+  color: #ffffff;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
 }
 
 .game-container {
@@ -17,7 +54,7 @@ body {
 
 header {
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 .rounds {
@@ -40,6 +77,8 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 19px;
+  border-radius: 20px;
+  margin: 0 20px;
 }
 
 .guessing-area {
@@ -77,17 +116,17 @@ header {
 }
 
 .computer-guess {
-  background-color: #ececec;
+  background-color: #B3317E;
 }
 
 #computer-guess {
   font-size: 50px;
   font-weight: 700;
-  color: #a5a5a5;
+  color: #ffffff;
 }
 
 .human-guess {
-  border: 1px solid #979797;
+  border: 1px solid #623EE2;
 }
 
 .guess input {
@@ -105,13 +144,13 @@ header {
 }
 
 .number-control {
-  border: solid 1px #4c7ef3;
+  border: solid 1px #623EE2;
   display: inline-block;
   width: 45px;
   height: 35px;
   font-size: 24px;
   font-weight: 700;
-  color: #4c7ef3;
+  color: #623EE2;
   cursor: pointer;
 }
 
@@ -137,9 +176,10 @@ header {
 }
 
 .button {
-  background-color: #4c7ef3;
+  background-color: #623EE2;
   color: #fff;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 #guess {
@@ -171,17 +211,17 @@ input[type=number]::-webkit-inner-spin-button {
   cursor: default;
 }
 
-.instructions {
-  background-color: #ececec;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+.material-symbols-outlined {
+  color: #a0a0a0;
 }
 
-.instruction {
-  width: 180px;
-  padding: 2px;
+.instructions {
+  background-color: #d2d2d2;
+  color: #504e4e;
+  display: none;
   text-align: center;
+  padding: 2px;
+  border-radius: 20px;
 }
 
 .instructions h3 {
@@ -189,6 +229,13 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .winning-text, .winning-text[disabled] {
-  color: #ec3636;
+  color: black;
   font-weight: 700;
+}
+
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .computer-guess, .human-guess {
+    width: 100%;
+  }
 }
