@@ -10,42 +10,6 @@ body {
   color: #ffffff;
 }
 
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
-}
-
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
-
 .game-container {
   max-width: 640px;
   margin: 0 auto;
@@ -78,14 +42,16 @@ header {
   align-items: center;
   padding: 19px;
   border-radius: 20px;
-  margin: 0 20px;
+  margin: 10px 20px;
 }
 
 .guessing-area {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+  flex-basis: 100%;
+  flex-wrap: wrap;
 }
 
 .guess-title {
@@ -218,10 +184,15 @@ input[type=number]::-webkit-inner-spin-button {
 .instructions {
   background-color: #d2d2d2;
   color: #504e4e;
-  display: none;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.instruction {
+  width: 180px;
   padding: 2px;
-  border-radius: 20px;
+  text-align: center;
 }
 
 .instructions h3 {
@@ -233,9 +204,10 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 700;
 }
 
-@media only screen and (max-width:500px) {
-  /* For mobile phones: */
-  .computer-guess, .human-guess {
-    width: 100%;
+@media (min-width: 600px) {
+
+  .guessing-area {
+    flex-wrap: nowrap;
   }
+
 }
